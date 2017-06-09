@@ -1,6 +1,10 @@
 $(document).ready(function () {
-    $("#internet-speed-link").on("click", OpenFrame($("#internet-speed-link").data("target")));
-    $("#home-link").on("click", GoHome());
+    $("#internet-speed-link").on("click", function () {
+        OpenFrame($("#internet-speed-link").data("target"))
+    });
+    $("#home-link").on("click", function () {
+        GoHome()
+    });
 });
 
 function OpenFrame(source) {
