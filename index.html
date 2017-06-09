@@ -21,6 +21,11 @@
     @media screen and (max-width: 767px) {
       .row.content {height: auto;} 
     }
+      
+    .logo {
+      max-height: 150px !important;
+      max-width: 205px !important;
+    }
   </style>
 </head>
 <body>
@@ -33,14 +38,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <a class="navbar-brand" href="#"><img class="logo img-responsive" alt="InformedOK Logo" src="./img/InformedOK.svg"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Dashboard</a></li>
-        <li><a href="#">Age</a></li>
-        <li><a href="#">Gender</a></li>
-        <li><a href="#">Geo</a></li>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a data-toggle="collapse" href="#collapse-navbar">Communications</a>
+          <div id="collapse-navbar" class="panel-collapse collapse">
+            <ul class="list-group">
+              <li class="list-group-item"><a href="oklahoma-internet-speeds/">Internet Speeds by County</a></li>
+            </ul>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -49,85 +58,26 @@
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav hidden-xs">
-      <h2>Logo</h2>
+      <h2><img class="logo img-responsive" alt="InformedOK Logo" src="./img/InformedOK.svg"></h2>
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">Dashboard</a></li>
-        <li><a href="#section2">Age</a></li>
-        <li><a href="#section3">Gender</a></li>
-        <li><a href="#section3">Geo</a></li>
+        <li id="home-link" class="active"><a href="#section1">Home</a></li>
+        <li><a data-toggle="collapse" href="#collapse-nav">Communications</a>
+          <div id="collapse-nav" class="panel-collapse collapse">
+            <ul class="list-group">
+              <a id="internet-speed-link" data-target="oklahoma-internet-speeds/index.html"><li class="list-group-item">Internet Speeds by County</li></a>
+            </ul>
+          </div>
+        </li>
       </ul><br>
     </div>
     <br>
-    
-    <div class="col-sm-9">
-      <div class="well">
-        <h4>Dashboard</h4>
-        <p>Some text..</p>
-      </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Users</h4>
-            <p>1 Million</p> 
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Pages</h4>
-            <p>100 Million</p> 
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Sessions</h4>
-            <p>10 Million</p> 
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Bounce</h4>
-            <p>30%</p> 
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p> 
-            <p>Text</p> 
-            <p>Text</p> 
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p> 
-            <p>Text</p> 
-            <p>Text</p> 
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p> 
-            <p>Text</p> 
-            <p>Text</p> 
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-8">
-          <div class="well">
-            <p>Text</p> 
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p> 
-          </div>
-        </div>
-      </div>
+    <div id="main-content">
+    </div>
+    <div id="dynamic-content" style="display:none;">
     </div>
   </div>
 </div>
 
+<script src="js/app.js"></script>
 </body>
 </html>
