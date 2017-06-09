@@ -9,6 +9,8 @@ $(document).ready(function () {
 
 function OpenFrame(source) {
   $("#dynamic-content").load(source);
+  $('#myChart-wrapper').width("70%");
+  $('#myChart-wrapper').addClass('pull-right');
   $("#dynamic-content").show();
   $("#main-content").hide();
 }
