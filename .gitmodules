@@ -1,0 +1,3 @@
+[submodule "oklahoma-internet-speeds"]
+	path = oklahoma-internet-speeds
+	url = https://github.com/Jacrys/oklahoma-internet-speeds.git
